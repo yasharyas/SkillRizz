@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container{
+  
+    display: flex;
+    
+}
+.content{
+   height: 100vh;
+    width: 50vw;
+    background: linear-gradient(90deg,#161616,#0e0e0e,#0e0e0e,#0e0e0e,#0e0e0e,#0e0e0e,#0e0e0e); 
+    background-size: 400% 400%;
+    animation: color 13s ease-in-out infinite;
+    color: white;
+    font-size: 30px;
+    
+}
+.logo{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+   
+}
+.words{
+    margin-top: 300px;
+    border: 2px;
+    border-style: solid;
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 30px;
+    z-index: 1;
+}
+.words a{
+    text-decoration:none ;
+    color: white;
+}
+
+@keyframes color {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} 
+
+.model{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("mask1.png");
+    background-color: whitesmoke;
+    opacity: 95%;
+   
+}
+
+.hover-text {
+    display: none;
+    position: absolute;
+    top: 60vh;
+    left: 1vw;
+    font-size: 20px;
+    border: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    
+  }
+  
+  .hover-container:hover .hover-text {
+    
+    display: inline-block;
+    transform: perspective(1000px) rotateX(35deg) translateZ(0);
+    
+  }
+
+.image-container {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.image-container img {
+    width: 40vw;
+    height: 50vh;
+    opacity: 0.95;
+}
+#dmodel {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    width: 45vw;
+    height: 80vh;
+   
+    z-index: 2;
+  }
+  .matrix{
+    width: 50vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  
